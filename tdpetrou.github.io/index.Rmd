@@ -1,0 +1,52 @@
+---
+title       : Lottery Presentation
+subtitle    : present code
+author      : tdpetrou
+job         : Data Science Specialist
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Playing the lottery
+
+Have you ever wanted to generate random lottery numbers?
+
+I know I have, but there isn't an easy way to do this on my android phone.
+
+---
+
+There are two different variables that you need in order to generate lottery numbers.
+
+1. The total number of balls to be drawn from.
+2. The number of balls to be drawn from that total
+
+---
+
+To do this we need the sample command in R, which when given two variables can produce the desired result.
+
+Here is a function that accomplishes this for us.
+
+```{r}
+balls = 50
+draws = 6
+sample(1:balls, draws)
+```
+
+Now, its your turn. Guess 8 numbers between 1 and 100 before you go to the next slide and see if you win the lottery!
+
+---
+
+```{r}
+balls = 100
+draws = 8
+sample(1:balls, draws)
+```
+
+## Did you win?
+
+Message me on github for your prize!!
+
